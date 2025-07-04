@@ -3,6 +3,7 @@
 My corner of the internet
 
 # Tech
+
 - [Next.js](https://nextjs.org/) (15+) with App Router
 - [Shadcn UI](https://ui.shadcn.com/)
 - [TailwindCSS](https://tailwindcss.com/)
@@ -15,6 +16,7 @@ My corner of the internet
 - [Knip](https://knip.dev/)
 
 # Scripts
+
 - `pnpm dev` - Development server
 - `pnpm build` - Build for production
 - `pnpm start` - Start production server
@@ -24,6 +26,7 @@ My corner of the internet
 - `pnpm knip` - Run knip
 
 # Todo
+
 - Header
 - Footer
 - Side nav

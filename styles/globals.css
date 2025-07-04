@@ -158,19 +158,19 @@
   }
 
   h1 {
-    @apply text-7xl font-black md:text-9xl pt-8 pb-4 px-4;
+    @apply px-4 pt-8 pb-4 text-7xl font-black md:text-9xl;
   }
 
   h2 {
-    @apply text-5xl font-black md:text-7xl pt-4 pb-4 px-4;
+    @apply px-4 pt-4 pb-4 text-5xl font-black md:text-7xl;
   }
 
   h3 {
-    @apply text-3xl font-black md:text-5xl pt-4 pb-4 px-4;
+    @apply px-4 pt-4 pb-4 text-3xl font-black md:text-5xl;
   }
 
   p {
-    @apply text-lg font-semibold md:text-2xl py-3 px-4;
+    @apply px-4 py-3 text-lg font-semibold md:text-2xl;
   }
 
   a {
@@ -188,6 +188,6 @@
   }
 
   ul {
-    @apply list-none text-lg font-semibold md:text-2xl ml-8 p-6;
+    @apply ml-8 list-none p-6 text-lg font-semibold md:text-2xl;
   }
 }

@@ -2,9 +2,10 @@ import type React from 'react'
 
 import type { Metadata } from 'next'
 
+import { Footer } from '@/components/footer'
+
 import { appConfig } from '@/lib/config/app'
 import { fontMono, fontSans } from '@/lib/config/fonts'
-import { Footer } from '@/components/footer'
 
 import '@/styles/globals.css'
 
