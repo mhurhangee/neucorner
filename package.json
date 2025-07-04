@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix": "prettier --write . && next lint --fix"
+    "fix": "prettier --write . && next lint --fix",
+    "clean": "pnpm store prune && pnpm install --force && rm -rf .next node_modules/.cache",
+    "knip": "knip"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
