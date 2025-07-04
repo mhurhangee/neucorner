@@ -2,8 +2,8 @@ import type React from 'react'
 
 import type { Metadata } from 'next'
 
-import { fontSans, fontMono } from '@/lib/config/fonts'
 import { appConfig } from '@/lib/config/app'
+import { fontMono, fontSans } from '@/lib/config/fonts'
 
 import '@/styles/globals.css'
 
