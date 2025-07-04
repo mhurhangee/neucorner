@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 
 import { appConfig } from '@/lib/config/app'
 import { fontMono, fontSans } from '@/lib/config/fonts'
+import { Footer } from '@/components/footer'
 
 import '@/styles/globals.css'
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
         {children}
+        <Footer />
       </body>
     </html>
   )
