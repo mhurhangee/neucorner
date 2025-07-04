@@ -1,8 +1,5 @@
-import { SquareIcon } from "@radix-ui/react-icons";
-
 export const appConfig = {
-  appName: 'My Corner of the Web | Michael Hurhangee',
-  appDescription: 'A portfolio, blog, resume and playground for Michael Hurhangee',
+  appName: 'my corner of the web',
+  appDescription: 'about, posts, experiments and more by michael hurhangee',
   emojiFavicon: '🔲',
-  icon: SquareIcon
 }

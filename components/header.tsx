@@ -13,13 +13,13 @@ export const Header = () => {
                     </div>
                     <div className="flex items-center gap-6">
                         <Link href="#about" className="text-xl font-bold">
-                            About
+                            about
                         </Link>
                         <Link href="#posts" className="text-xl font-bold">
-                            Thoughts
+                            posts
                         </Link>
-                        <Link href="/playground" className="text-xl font-bold">
-                            Playground
+                        <Link href="/experiments" className="text-xl font-bold">
+                            experiments
                         </Link>
                     </div>
                 </div>

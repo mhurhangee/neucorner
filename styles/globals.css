@@ -170,7 +170,7 @@
   }
 
   a {
-    @apply text-primary lowercase relative;
+    @apply text-primary relative;
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
     background-position: 0 100%;
     background-repeat: no-repeat;
