@@ -12,10 +12,10 @@ export const Header = () => {
                         </Link>
                     </div>
                     <div className="flex items-center gap-6">
-                        <Link href="#about" className="text-xl font-bold">
+                        <Link href="/#about" className="text-xl font-bold">
                             about
                         </Link>
-                        <Link href="#posts" className="text-xl font-bold">
+                        <Link href="/#posts" className="text-xl font-bold">
                             posts
                         </Link>
                         <Link href="/experiments" className="text-xl font-bold">

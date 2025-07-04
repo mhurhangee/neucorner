@@ -158,15 +158,19 @@
   }
 
   h1 {
-    @apply text-7xl font-black md:text-9xl;
+    @apply text-7xl font-black md:text-9xl pt-8 pb-4 px-4;
   }
 
   h2 {
-    @apply text-5xl font-black md:text-7xl;
+    @apply text-5xl font-black md:text-7xl pt-4 pb-4 px-4;
+  }
+
+  h3 {
+    @apply text-3xl font-black md:text-5xl pt-4 pb-4 px-4;
   }
 
   p {
-    @apply text-lg font-semibold md:text-2xl;
+    @apply text-lg font-semibold md:text-2xl py-3 px-4;
   }
 
   a {
