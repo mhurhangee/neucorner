@@ -8,9 +8,7 @@ export const AboutSection = () => {
       <h2>about</h2>
       <ul>
         <li>
-          <Link href="https://www.linkedin.com/in/michael-hurhangee/">
-            former Patent Attorney
-          </Link>
+          <Link href="https://www.linkedin.com/in/michael-hurhangee/">former Patent Attorney</Link>
         </li>
         <li>
           <Link href="https://doi.org/10.25560/73366">PhD & MSci in Chemistry</Link>
@@ -42,7 +40,7 @@ export const AboutSection = () => {
         </li>
       </ul>
       <p>I love learning and making new things.</p>
-      <p>This is my place to share them.</p>
+      <p>This is my place to <Link href="/experiments">share them</Link>.</p>
     </Section>
   )
 }

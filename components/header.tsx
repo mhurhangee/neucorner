@@ -14,13 +14,16 @@ export const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="site-logo">
+            <Link href="/" className="site-logo no-underline">
               {appConfig.emojiFavicon}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-6 md:flex">
+            <Link href="/" className="nav-link">
+              home
+            </Link>
             <Link href="/#about" className="nav-link">
               about
             </Link>

@@ -9,7 +9,6 @@ export const HeroSection = () => {
         <h1>
           my corner <br /> of the web
         </h1>
-        <p className="text-2xl font-light">by michael hurhangee</p>
         <p>
           <Link href="mailto:m.hurhangee@me.com" className="mr-4 lowercase">
             email

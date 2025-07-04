@@ -11,7 +11,6 @@ const posts = defineCollection({
     title: z.string(),
     summary: z.string(),
     date: z.string(),
-    readingTime: z.string(),
     category: z.string(),
     next: z.string().optional(),
     prev: z.string().optional(),
