@@ -9,12 +9,11 @@ export const HeroSection = () => {
         <h1>
           my corner <br /> of the web
         </h1>
-        <p className="flex items-center gap-2 pl-2">
-          michael hurhangee •
-          <Link href="mailto:m.hurhangee@me.com" className="lowercase">
+        <p className="text-2xl font-light">by michael hurhangee</p>
+        <p>
+          <Link href="mailto:m.hurhangee@me.com" className="mr-4 lowercase">
             email
           </Link>
-          •
           <Link href="https://github.com/mhurhangee" className="lowercase">
             github
           </Link>

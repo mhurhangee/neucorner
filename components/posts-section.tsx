@@ -11,7 +11,7 @@ export const PostsSection = () => {
     <Section id="posts">
       <h2>posts</h2>
       <p>my thoughts, insights and ramblings.</p>
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="ml-4 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {allPosts.map(post => (
           <Link key={post._meta.path} href={`/posts/${post._meta.path}`}>
             <article className="border-border group cursor-pointer border-2 transition-all hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">

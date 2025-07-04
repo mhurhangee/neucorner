@@ -1,29 +1,61 @@
+'use client'
+
+import { useState } from 'react'
+
 import Link from 'next/link'
 
 import { appConfig } from '@/lib/config/app'
 
 export const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <nav className="border-b-2 border-black">
-      <div className="mx-auto max-w-7xl p-6">
+      <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold">
+            <Link href="/" className="site-logo">
               {appConfig.emojiFavicon}
             </Link>
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="/#about" className="text-xl font-bold">
+
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-6 md:flex">
+            <Link href="/#about" className="nav-link">
               about
             </Link>
-            <Link href="/#posts" className="text-xl font-bold">
+            <Link href="/#posts" className="nav-link">
               posts
             </Link>
-            <Link href="/experiments" className="text-xl font-bold">
+            <Link href="/experiments" className="nav-link">
               experiments
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? '✕' : '☰'}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="flex flex-col gap-4 py-4 md:hidden">
+            <Link href="/#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+              about
+            </Link>
+            <Link href="/#posts" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+              posts
+            </Link>
+            <Link href="/experiments" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+              experiments
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   )

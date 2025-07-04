@@ -1,11 +1,8 @@
-import { MDXContent } from '@content-collections/mdx/react'
-
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { Container } from '@/components/container'
 import { Header } from '@/components/header'
-import { Section } from '@/components/section'
+import { Post as PostComponent } from '@/components/posts'
 
 import { allPosts } from 'content-collections'
 
@@ -20,41 +17,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
   return (
     <Container>
       <Header />
-      <Section id={post.title}>
-        <h1>{post.title}</h1>
-
-        <div className="border-border flex items-center justify-between border-b">
-          <p className="text-lg font-semibold">{post.summary}</p>
-          <div>
-            <p className="text-sm font-medium">
-              {' '}
-              by <Link href="/#about">me</Link> • {post.date}{' '}
-            </p>
-          </div>
-        </div>
-        <MDXContent code={post.mdx || ''} />
-      </Section>
-      <section className="container mx-auto h-24">
-        <div className="flex items-center justify-between pt-8 pb-8">
-          {post.prev ? (
-            <span className="text-sm font-medium">
-              <Link href={post.prev}>prev</Link>
-            </span>
-          ) : (
-            <div className="w-16" />
-          )}
-          <span className="text-sm font-medium">
-            <Link href="/#posts">all posts</Link>
-          </span>
-          {post.next ? (
-            <span className="text-sm font-medium">
-              <Link href={post.next}>next</Link>
-            </span>
-          ) : (
-            <div className="w-16" />
-          )}
-        </div>
-      </section>
+      <PostComponent post={post} />
     </Container>
   )
 }

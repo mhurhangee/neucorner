@@ -9,7 +9,7 @@ export const AboutSection = () => {
       <ul>
         <li>
           <Link href="https://www.linkedin.com/in/michael-hurhangee/">
-            Patent Attorney (former)
+            former Patent Attorney
           </Link>
         </li>
         <li>
