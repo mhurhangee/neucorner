@@ -158,19 +158,19 @@
   }
 
   h1 {
-    @apply px-4 pt-6 pb-4 text-5xl font-black md:text-7xl lg:text-9xl;
+    @apply pt-6 pb-4 tracking-tight text-6xl font-black sm:text-7xl md:text-9xl lg:text-9xl;
   }
 
   h2 {
-    @apply px-4 pt-4 pb-4 text-4xl font-black md:text-5xl lg:text-7xl;
+    @apply pt-4 pb-4 tracking-tight text-4xl font-black sm:text-5xl md:text-6xl lg:text-7xl;
   }
 
   h3 {
-    @apply px-4 pt-4 pb-4 text-2xl font-black md:text-3xl lg:text-5xl;
+    @apply pt-4 pb-4 tracking-tight text-2xl font-black md:text-3xl lg:text-5xl;
   }
 
   p {
-    @apply px-4 py-2 text-base font-semibold md:py-3 md:text-lg lg:text-2xl;
+    @apply py-2 text-base font-semibold leading-relaxed md:py-3 md:text-lg lg:text-2xl;
   }
 
   a {
@@ -208,14 +208,6 @@
   }
 
   .nav-link {
-    @apply text-lg font-bold md:text-xl;
-  }
-
-  .footer-brand {
-    @apply text-base font-bold md:text-lg;
-  }
-
-  .footer-links {
-    @apply flex flex-wrap items-center gap-2 text-sm md:text-base;
+    @apply text-lg uppercase font-bold md:text-xl;
   }
 }

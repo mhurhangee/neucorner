@@ -2,9 +2,8 @@ import Link from 'next/link'
 
 export const Footer = () => {
   return (
-    <footer className="border-border border-t-2">
-      <div className="container">
-        <div className="flex gap-2">
+    <footer className="mx-auto flex max-w-4xl container">
+      <div className="flex justify-between gap-2">
           <p className="text-xs font-light md:text-sm">by michael hurhangee</p>
           <p className="text-xs md:text-sm">
             <Link href="mailto:m.hurhangee@me.com" className="mr-4 lowercase">
@@ -14,7 +13,6 @@ export const Footer = () => {
               github
             </Link>
           </p>
-        </div>
       </div>
     </footer>
   )

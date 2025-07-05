@@ -4,62 +4,43 @@ import { useState } from 'react'
 
 import Link from 'next/link'
 
-import { appConfig } from '@/lib/config/app'
+import { Button } from './ui/button'
 
 export const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="border-b-2 border-black">
-      <div className="container">
+    <nav className="container">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="site-logo no-underline">
-              {appConfig.emojiFavicon}
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden items-center gap-6 md:flex">
-            <Link href="/" className="nav-link">
-              home
-            </Link>
-            <Link href="/#about" className="nav-link">
-              about
-            </Link>
-            <Link href="/#posts" className="nav-link">
-              posts
-            </Link>
-            <Link href="/experiments" className="nav-link">
-              experiments
-            </Link>
-          </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? '✕' : '☰'}
-          </button>
+            {menuOpen ? '✕' : '☰'}
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="flex flex-col gap-4 py-4 md:hidden">
-            <Link href="/#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+        {menuOpen && (
+          <div className="flex flex-col gap-4 py-4">
+            <Link href="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+              home
+            </Link>
+            <Link href="/#about" className="nav-link" onClick={() => setMenuOpen(false)}>
               about
             </Link>
-            <Link href="/#posts" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#posts" className="nav-link" onClick={() => setMenuOpen(false)}>
               posts
             </Link>
-            <Link href="/experiments" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/experiments" className="nav-link" onClick={() => setMenuOpen(false)}>
               experiments
             </Link>
           </div>
         )}
-      </div>
     </nav>
   )
 }

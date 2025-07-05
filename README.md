@@ -27,6 +27,11 @@ My corner of the internet
 
 # Todo
 
-- Header
-- Footer
-- Side nav
+- Add dark mode
+- Experiments section
+- Swiss grid
+- External links
+- 
+
+
+

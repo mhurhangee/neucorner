@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { Container } from '@/components/container'
 import { Header } from '@/components/header'
 import { Post as PostComponent } from '@/components/posts'
+import { Footer } from '@/components/footer'
 
 import { allPosts } from 'content-collections'
 
@@ -18,6 +19,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
     <Container>
       <Header />
       <PostComponent post={post} />
+      <Footer />
     </Container>
   )
 }

@@ -5,19 +5,13 @@ import { Section } from './section'
 export const HeroSection = () => {
   return (
     <Section id="home">
-      <div>
         <h1>
-          my corner <br /> of the web
+          my <br />
+          webcorner <br />
         </h1>
-        <p>
-          <Link href="mailto:m.hurhangee@me.com" className="mr-4 lowercase">
-            email
-          </Link>
-          <Link href="https://github.com/mhurhangee" className="lowercase">
-            github
-          </Link>
+        <p className="pb-8">
+          <Link href="#about">about</Link>, <Link href="#posts">posts</Link> and <Link href="/experiments">experiments</Link>.
         </p>
-      </div>
     </Section>
   )
 }

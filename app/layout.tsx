@@ -31,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
         {children}
-        <Footer />
       </body>
     </html>
   )
