@@ -40,7 +40,9 @@ export const AboutSection = () => {
         </li>
       </ul>
       <p>I love learning and making new things.</p>
-      <p>This is my place to <Link href="/experiments">share them</Link>.</p>
+      <p>
+        This is my place to <Link href="/experiments">share them</Link>.
+      </p>
     </Section>
   )
 }

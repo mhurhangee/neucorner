@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation'
 
 import { Container } from '@/components/container'
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Post as PostComponent } from '@/components/posts'
-import { Footer } from '@/components/footer'
 
 import { allPosts } from 'content-collections'
 

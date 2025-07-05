@@ -31,7 +31,4 @@ My corner of the internet
 - Experiments section
 - Swiss grid
 - External links
-- 
-
-
-
+-

@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import 'highlight.js/styles/github.css';
+
 :root {
   --background: oklch(0.99 0 0);
   --foreground: oklch(0 0 0);
@@ -158,39 +160,41 @@
   }
 
   h1 {
-    @apply pt-6 pb-4 tracking-tight text-6xl font-black sm:text-7xl md:text-9xl lg:text-9xl;
+    @apply pt-6 pb-4 text-6xl font-black tracking-tight sm:text-7xl md:text-9xl lg:text-9xl;
   }
 
   h2 {
-    @apply pt-4 pb-4 tracking-tight text-4xl font-black sm:text-5xl md:text-6xl lg:text-7xl;
+    @apply pt-4 pb-4 text-4xl font-black tracking-tight sm:text-5xl md:text-6xl lg:text-7xl;
   }
 
   h3 {
-    @apply pt-4 pb-4 tracking-tight text-2xl font-black md:text-3xl lg:text-5xl;
+    @apply pt-4 pb-4 text-2xl font-black tracking-tight md:text-3xl lg:text-5xl;
   }
 
   p {
-    @apply py-2 text-base font-semibold leading-relaxed md:py-3 md:text-lg lg:text-2xl;
+    @apply py-2 text-base leading-relaxed font-semibold md:py-3 md:text-lg lg:text-2xl;
   }
 
   a {
     @apply text-primary relative underline decoration-1 underline-offset-4;
-    transition: color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
+    transition:
+      color 0.3s ease-in-out,
+      text-decoration-thickness 0.3s ease-in-out;
   }
 
   a:hover {
     @apply text-primary/90 underline decoration-2;
     text-underline-offset: 4px;
   }
-  
-  a[href^="http"]::after {
-    content: "↗";
-    @apply text-sm inline-block ml-0.5 -translate-y-1;
+
+  a[href^='http']::after {
+    content: '↗';
+    @apply ml-0.5 inline-block -translate-y-1 text-sm;
     transition: transform 0.2s ease-out;
     vertical-align: -0.1em;
   }
-  
-  a[href^="http"]:hover::after {
+
+  a[href^='http']:hover::after {
     @apply text-primary/90;
     transform: translate(1px, -1px);
   }
@@ -208,6 +212,10 @@
   }
 
   .nav-link {
-    @apply text-lg uppercase font-bold md:text-xl;
+    @apply text-lg font-bold uppercase md:text-xl;
+  }
+
+  pre code {
+    @apply text-xs md:text-sm;
   }
 }

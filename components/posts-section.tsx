@@ -16,9 +16,7 @@ export const PostsSection = () => {
             <Link key={post._meta.path} href={`/posts/${post._meta.path}`} className="no-underline">
               <article className="border-border group cursor-pointer border-2 transition-all hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <div className="px-6 py-4">
-                  <span className="text-sm font-bold uppercase">
-                    {post.category}
-                  </span>
+                  <span className="text-sm font-bold uppercase">{post.category}</span>
                   <h3 className="decoration-4 underline-offset-4 group-hover:underline">
                     {post.title}
                   </h3>
