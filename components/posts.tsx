@@ -23,7 +23,7 @@ export const Post = ({ post }: { post: PostType }) => {
 
       </Section>
       <Section id={post.title + '-content'}>
-        <MDXContent code={post.mdx || ''} />
+        <MDXContent code={post.mdx || ''}/>
       </Section>
 
       <section className="container mx-auto h-24">

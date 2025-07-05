@@ -1,5 +1,3 @@
-import { ArrowRightIcon } from '@radix-ui/react-icons'
-
 import Link from 'next/link'
 
 import { allPosts } from 'content-collections'

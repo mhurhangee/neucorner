@@ -1,5 +1,5 @@
 export const appConfig = {
-  appName: 'my corner of the web',
-  appDescription: 'about, posts, experiments and more by michael hurhangee',
+  appName: 'my webcorner',
+  appDescription: 'about, posts, and experiments by michael hurhangee',
   emojiFavicon: '🔲',
 }
