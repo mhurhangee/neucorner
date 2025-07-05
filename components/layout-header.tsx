@@ -34,7 +34,7 @@ export const Header = () => {
           <Link href="/#about" className="nav-link" onClick={() => setMenuOpen(false)}>
             about
           </Link>
-          <Link href="/#posts" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link href="/posts" className="nav-link" onClick={() => setMenuOpen(false)}>
             posts
           </Link>
           <Link href="/experiments" className="nav-link" onClick={() => setMenuOpen(false)}>
