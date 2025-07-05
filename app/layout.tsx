@@ -2,6 +2,8 @@ import type React from 'react'
 
 import type { Metadata } from 'next'
 
+import { ThemeProvider } from '@/components/ui/theme-provider'
+
 import { appConfig } from '@/lib/config/app'
 import { fontMono, fontSans } from '@/lib/config/fonts'
 
@@ -28,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
