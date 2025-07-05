@@ -6,8 +6,9 @@ export const HeroSection = () => {
   return (
     <Section id="home">
       <h1 className="pt-0">
-        my <br />web <br />corner <br />
-
+        my <br />
+        web <br />
+        corner <br />
       </h1>
       <p className="pb-8">
         <Link href="#about">about</Link>, <Link href="#posts">posts</Link> and{' '}
