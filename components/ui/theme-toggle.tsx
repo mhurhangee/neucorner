@@ -52,7 +52,7 @@ export function ThemeToggle() {
   const { toggleTheme } = useThemeToggle()
 
   return (
-    <Button onClick={toggleTheme} variant="ghost" size="sm" className="size-8 p-0">
+    <Button onClick={toggleTheme} variant="ghost" size="icon">
       <SunIcon
         size={12}
         className="scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"
