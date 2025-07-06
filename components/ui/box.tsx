@@ -15,7 +15,7 @@ export const Box = ({
 }) => {
   return (
     <Link href={href} className="no-underline">
-      <article className="border-border group cursor-pointer border-2 transition-all hover:shadow-[4px_4px_0px_0px_var(--border)]">
+      <article className="border-border group h-full cursor-pointer border-2 transition-all hover:shadow-[4px_4px_0px_0px_var(--border)]">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold uppercase">{category}</span>
