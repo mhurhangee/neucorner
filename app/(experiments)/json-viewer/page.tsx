@@ -82,9 +82,7 @@ export default function JsonViewerDemo() {
     <Container>
       <Section id="json-viewer-hero">
         <h1>json viewer</h1>
-        <p>
-          A shadcn-inspired JSON viewer for debugging API responses with tree and raw views.
-        </p>
+        <p>A shadcn-inspired JSON viewer for debugging API responses with tree and raw views.</p>
         <ul>
           <li>
             <Link href="#demo">demo</Link>

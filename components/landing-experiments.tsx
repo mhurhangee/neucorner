@@ -1,7 +1,10 @@
 import Link from 'next/link'
 
-import { Section } from './layout-section'
-import { Box } from './ui/box'
+import { Box } from '@/components/ui/box'
+
+import { Section } from '@/components/layout-section'
+
+import { EXPERIMENTS } from '@/lib/config/experiments'
 
 export const Experiments = () => {
   return (
@@ -12,27 +15,16 @@ export const Experiments = () => {
       </p>
 
       <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-        <Box
-          href="#ai-experiments"
-          category="AI"
-          date="2025-07-05"
-          title="A first thing"
-          summary="Waiting for the next big thing. "
-        />
-        <Box
-          href="#ai-experiments"
-          category="AI"
-          date="2025-07-05"
-          title="Something else"
-          summary="Holding my breath."
-        />
-        <Box
-          href="#ai-experiments"
-          category="AI"
-          date="2025-07-05"
-          title="Maybe nothing"
-          summary="What's next?"
-        />
+        {EXPERIMENTS.map(experiment => (
+          <Box
+            key={experiment.title}
+            href={experiment.href}
+            category={experiment.category}
+            date={experiment.date}
+            title={experiment.title}
+            summary={experiment.summary}
+          />
+        ))}
       </div>
     </Section>
   )
