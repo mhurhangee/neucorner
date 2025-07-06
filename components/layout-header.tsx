@@ -5,13 +5,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 import { Button } from './ui/button'
+import { ThemeToggle } from './ui/theme-toggle'
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <nav className="container">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center">
         {/* Mobile Menu Button */}
         <Button
           variant="ghost"
@@ -21,6 +22,7 @@ export const Header = () => {
         >
           {menuOpen ? '✕' : '☰'}
         </Button>
+        <ThemeToggle />
       </div>
 
       {/* Mobile Navigation */}
@@ -32,7 +34,7 @@ export const Header = () => {
           <Link href="/#about" className="nav-link" onClick={() => setMenuOpen(false)}>
             about
           </Link>
-          <Link href="/#posts" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link href="/posts" className="nav-link" onClick={() => setMenuOpen(false)}>
             posts
           </Link>
           <Link href="/experiments" className="nav-link" onClick={() => setMenuOpen(false)}>

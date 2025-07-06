@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { Section } from './section'
+import { Section } from './layout-section'
 
-export const AboutSection = () => {
+export const About = () => {
   return (
     <Section id="about">
       <h2>about</h2>

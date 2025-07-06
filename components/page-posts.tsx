@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 import { type Post as PostType } from 'content-collections'
 
-import { Section } from './section'
+import { Section } from './layout-section'
 
-export const Post = ({ post }: { post: PostType }) => {
+export const PagePost = ({ post }: { post: PostType }) => {
   return (
     <>
       <Section id={post.title}>
@@ -35,7 +35,7 @@ export const Post = ({ post }: { post: PostType }) => {
             <div className="w-16" />
           )}
           <span className="text-sm font-medium">
-            <Link href="/#posts">all posts</Link>
+            <Link href="/posts">all posts</Link>
           </span>
           {post.next ? (
             <span className="text-sm font-medium">
