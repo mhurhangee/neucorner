@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Section } from './layout-section'
+import { Section } from './layout-section';
 
 export const About = () => {
   return (
@@ -8,10 +8,14 @@ export const About = () => {
       <h2>about</h2>
       <ul>
         <li>
-          <Link href="https://www.linkedin.com/in/michael-hurhangee/">former Patent Attorney</Link>
+          <Link href="https://www.linkedin.com/in/michael-hurhangee/">
+            former Patent Attorney
+          </Link>
         </li>
         <li>
-          <Link href="https://doi.org/10.25560/73366">PhD & MSci in Chemistry</Link>
+          <Link href="https://doi.org/10.25560/73366">
+            PhD & MSci in Chemistry
+          </Link>
         </li>
         <li>
           <Link href="https://scholar.google.co.uk/scholar?hl=en&as_sdt=0%2C5&q=michael+hurhangee">
@@ -19,7 +23,9 @@ export const About = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://patents.google.com/patent/US11667650B2">1 granted patent</Link>
+          <Link href="https://patents.google.com/patent/US11667650B2">
+            1 granted patent
+          </Link>
         </li>
         <li>
           <Link href="https://scholar.google.co.uk/scholar?hl=en&as_sdt=0%2C5&q=michael+hurhangee">
@@ -44,5 +50,5 @@ export const About = () => {
         This is my place to <Link href="/experiments">share them</Link>.
       </p>
     </Section>
-  )
-}
+  );
+};

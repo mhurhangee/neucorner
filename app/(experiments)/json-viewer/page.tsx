@@ -1,16 +1,13 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import Link from 'next/link';
+import { useState } from 'react';
+import { Container } from '@/components/layout-container';
+import { Section } from '@/components/layout-section';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 
-import Link from 'next/link'
-
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-
-import { Container } from '@/components/layout-container'
-import { Section } from '@/components/layout-section'
-
-import JsonViewer from './viewer'
+import JsonViewer from './viewer';
 
 const sampleApiResponse = {
   data: {
@@ -68,21 +65,28 @@ const sampleApiResponse = {
     requestId: 'req_123456789',
   },
   status: 'success',
-}
+};
 
 export default function JsonViewerDemo() {
-  const [jsonInput, setJsonInput] = useState(JSON.stringify(sampleApiResponse, null, 2))
-  const [currentJson, setCurrentJson] = useState<string | object>(sampleApiResponse)
+  const [jsonInput, setJsonInput] = useState(
+    JSON.stringify(sampleApiResponse, null, 2)
+  );
+  const [currentJson, setCurrentJson] = useState<string | object>(
+    sampleApiResponse
+  );
 
   const handleUpdateJson = () => {
-    setCurrentJson(jsonInput)
-  }
+    setCurrentJson(jsonInput);
+  };
 
   return (
     <Container>
       <Section id="json-viewer-hero">
         <h1>json viewer</h1>
-        <p>A shadcn-inspired JSON viewer for debugging API responses with tree and raw views.</p>
+        <p>
+          A shadcn-inspired JSON viewer for debugging API responses with tree
+          and raw views.
+        </p>
         <ul>
           <li>
             <Link href="#demo">demo</Link>
@@ -103,10 +107,10 @@ export default function JsonViewerDemo() {
         <p>to test the demo with</p>
         <div className="space-y-4">
           <Textarea
-            value={jsonInput}
-            onChange={e => setJsonInput(e.target.value)}
-            placeholder="Paste your JSON here..."
             className="max-h-[200px] font-mono text-sm"
+            onChange={(e) => setJsonInput(e.target.value)}
+            placeholder="Paste your JSON here..."
+            value={jsonInput}
           />
           <div className="flex gap-2">
             <Button onClick={handleUpdateJson} variant="nc">
@@ -119,9 +123,14 @@ export default function JsonViewerDemo() {
       <Section id="result">
         <div>
           <h3>json viewer</h3>
-          <JsonViewer data={currentJson} defaultView="tree" maxHeight="300px" showCopyPath={true} />
+          <JsonViewer
+            data={currentJson}
+            defaultView="tree"
+            maxHeight="300px"
+            showCopyPath={true}
+          />
         </div>
       </Section>
     </Container>
-  )
+  );
 }

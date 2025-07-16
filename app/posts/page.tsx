@@ -1,9 +1,8 @@
-import { Box } from '@/components/ui/box'
+import { allPosts } from 'content-collections';
 
-import { Container } from '@/components/layout-container'
-import { Section } from '@/components/layout-section'
-
-import { allPosts } from 'content-collections'
+import { Container } from '@/components/layout-container';
+import { Section } from '@/components/layout-section';
+import { Box } from '@/components/ui/box';
 
 export default function PostsPage() {
   return (
@@ -17,19 +16,21 @@ export default function PostsPage() {
         <p>of pretty pointless posts.</p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
           {allPosts
-            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-            .map(post => (
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map((post) => (
               <Box
-                key={post._meta.path}
-                href={`/posts/${post._meta.path}`}
                 category={post.category}
                 date={post.date}
-                title={post.title}
+                href={`/posts/${post._meta.path}`}
+                key={post._meta.path}
                 summary={post.summary}
+                title={post.title}
               />
             ))}
         </div>
       </Section>
     </Container>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Container } from '@/components/layout-container'
-import { Section } from '@/components/layout-section'
+import { Container } from '@/components/layout-container';
+import { Section } from '@/components/layout-section';
 
 export default function ChatPage() {
   return (
@@ -15,5 +15,5 @@ export default function ChatPage() {
       </Section>
       <Section id="chat">CHAT</Section>
     </Container>
-  )
+  );
 }

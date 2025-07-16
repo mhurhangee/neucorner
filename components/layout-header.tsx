@@ -1,24 +1,23 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import Link from 'next/link';
+import { useState } from 'react';
 
-import Link from 'next/link'
-
-import { Button } from './ui/button'
-import { ThemeToggle } from './ui/theme-toggle'
+import { Button } from './ui/button';
+import { ThemeToggle } from './ui/theme-toggle';
 
 export const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="container">
       <div className="flex items-center">
         {/* Mobile Menu Button */}
         <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          size="icon"
+          variant="ghost"
         >
           {menuOpen ? '✕' : '☰'}
         </Button>
@@ -28,20 +27,36 @@ export const Header = () => {
       {/* Mobile Navigation */}
       {menuOpen && (
         <div className="flex flex-col gap-4 py-4">
-          <Link href="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link
+            className="nav-link"
+            href="/"
+            onClick={() => setMenuOpen(false)}
+          >
             home
           </Link>
-          <Link href="/#about" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link
+            className="nav-link"
+            href="/#about"
+            onClick={() => setMenuOpen(false)}
+          >
             about
           </Link>
-          <Link href="/posts" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link
+            className="nav-link"
+            href="/posts"
+            onClick={() => setMenuOpen(false)}
+          >
             posts
           </Link>
-          <Link href="/experiments" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link
+            className="nav-link"
+            href="/experiments"
+            onClick={() => setMenuOpen(false)}
+          >
             experiments
           </Link>
         </div>
       )}
     </nav>
-  )
-}
+  );
+};

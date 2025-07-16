@@ -1,8 +1,8 @@
-import { defineCollection, defineConfig } from '@content-collections/core'
-import { compileMDX } from '@content-collections/mdx'
+import { defineCollection, defineConfig } from '@content-collections/core';
+import { compileMDX } from '@content-collections/mdx';
 
-import rehypeHighlight from 'rehype-highlight'
-import { z } from 'zod'
+import rehypeHighlight from 'rehype-highlight';
+import { z } from 'zod';
 
 const posts = defineCollection({
   name: 'posts',
@@ -19,14 +19,14 @@ const posts = defineCollection({
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, {
       rehypePlugins: [rehypeHighlight],
-    })
+    });
     return {
       ...document,
       mdx,
-    }
+    };
   },
-})
+});
 
 export default defineConfig({
   collections: [posts],
-})
+});

@@ -6,4 +6,4 @@ export const EXPERIMENTS = [
     category: 'component',
     href: '/json-viewer',
   },
-]
+];

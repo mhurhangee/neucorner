@@ -1,16 +1,18 @@
-import type React from 'react'
+import type { Metadata } from 'next';
+import type React from 'react';
 
-import type { Metadata } from 'next'
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
-import { ThemeProvider } from '@/components/ui/theme-provider'
+import { appConfig } from '@/lib/config/app';
+import { fontMono, fontSans } from '@/lib/config/fonts';
 
-import { appConfig } from '@/lib/config/app'
-import { fontMono, fontSans } from '@/lib/config/fonts'
-
-import '@/styles/globals.css'
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: process.env.NODE_ENV === 'development' ? ` (dev) ${appConfig.appName}` : appConfig.appName,
+  title:
+    process.env.NODE_ENV === 'development'
+      ? ` (dev) ${appConfig.appName}`
+      : appConfig.appName,
   description: appConfig.appDescription,
   icons: {
     icon: [
@@ -24,16 +26,26 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+      <body
+        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Section } from './layout-section'
+import { Section } from './layout-section';
 
 export const Hero = () => {
   return (
@@ -12,9 +12,10 @@ export const Hero = () => {
       </h1>
       <p className="pb-8">
         {' '}
-        for <Link href="/posts">posts</Link>, <Link href="/experiments">experiments</Link> and a bit{' '}
+        for <Link href="/posts">posts</Link>,{' '}
+        <Link href="/experiments">experiments</Link> and a bit{' '}
         <Link href="/about">about me</Link>.
       </p>
     </Section>
-  )
-}
+  );
+};

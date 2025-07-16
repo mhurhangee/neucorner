@@ -1,9 +1,8 @@
-import Link from 'next/link'
+import { allPosts } from 'content-collections';
+import Link from 'next/link';
 
-import { allPosts } from 'content-collections'
-
-import { Section } from './layout-section'
-import { Box } from './ui/box'
+import { Section } from './layout-section';
+import { Box } from './ui/box';
 
 export const Posts = () => {
   return (
@@ -14,19 +13,21 @@ export const Posts = () => {
       </p>
       <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
         {allPosts
-          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          )
           .slice(0, 4)
-          .map(post => (
+          .map((post) => (
             <Box
-              key={post._meta.path}
-              href={`/posts/${post._meta.path}`}
               category={post.category}
               date={post.date}
-              title={post.title}
+              href={`/posts/${post._meta.path}`}
+              key={post._meta.path}
               summary={post.summary}
+              title={post.title}
             />
           ))}
       </div>
     </Section>
-  )
-}
+  );
+};
